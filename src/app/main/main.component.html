@@ -1,0 +1,21 @@
+<main>
+    <h1>Our Collection</h1>
+    <p id="introductionText">Introducing our Coffe Collection, a selection of unique coffees
+        from different roast types and origns, expertly roasted in small
+        batches and shipped fresh weekly.
+    </p>
+
+    <div id="selectors">
+        @for (option of options; track $index) {
+            <button [class]="{
+                'selectedOption': option.selected
+            }" (click)="onSelectOption($index, option.text)">{{option.text}}</button>
+        }
+    </div>
+
+    <section id="coffeList">
+        @for (coffee of tempCoffees; track $index) {
+            <app-coffee [coffeeInput]="coffee"></app-coffee>
+        }
+    </section>
+</main>

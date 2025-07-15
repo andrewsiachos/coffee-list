@@ -1,0 +1,68 @@
+.selectedOption{
+    background-color: #4d5561 !important;
+}
+
+main{
+    width: 85%;
+    border-radius: 20px;
+    background-color: #1c1d1f;
+    margin: -150px auto;
+
+    #selectors{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        button{
+            display: block;
+            color: white;
+            background-color: transparent;
+            border: none;
+            border-radius: 6px;
+            padding: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+    }
+    #coffeList{
+        width: 70%;
+        margin: 15px auto;
+        display: grid;
+        grid-template-columns: 31% 31% 31%;
+        justify-content: space-between;
+        grid-row-gap: 10px;
+    }
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: #FEF7EE;
+    font-size: 32px;
+}
+#introductionText{
+    color: #6F757C;
+    width: 40%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+@media ( max-width: 1024px ){
+    main{
+        #coffeList{
+            width: 90%;
+        }
+    }
+}
+
+@media ( max-width: 768px ){
+    main{
+        #coffeList{
+            width: 90%;
+            grid-template-columns: 60%;
+            justify-content: center;
+            grid-row-gap: 10px;
+        }
+    }
+}

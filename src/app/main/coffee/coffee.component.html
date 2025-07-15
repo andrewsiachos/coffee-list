@@ -1,0 +1,30 @@
+<div class="coffeeItem">
+    <div class="itemImage" [style]="'background: url(' +coffeeInput.image+')'">
+        @if (coffeeInput.popular) {
+            <p class="popular">Popular</p>
+        }
+    </div>
+
+    <div class="nameAndPrice">
+        <p class="name">{{coffeeInput.name}}</p>
+        <p class="price">{{coffeeInput.price}}</p>
+    </div>
+
+    <div class="ratingContainer">
+        <div class="starAndNumber">
+            @if(coffeeInput.rating){
+                <div>
+                    <img src="Star_fill.svg" alt="">
+                    <p>{{coffeeInput.rating}}<span>({{coffeeInput.votes}} votes)</span></p>
+                </div>
+                @if (!coffeeInput.available) {
+                    <p class="soldOut">Sold Out</p>
+                }
+                
+            }@else {
+                <img src="Star.svg" alt="">
+                <p class="noRatingText">No ratings</p>
+            }
+        </div>
+    </div>
+</div>

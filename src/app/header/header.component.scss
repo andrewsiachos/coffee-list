@@ -1,0 +1,12 @@
+header{
+    height: 300px;
+    background: url('../../../public/bg-cafe-lg.jpg');
+}
+
+@media (max-width: 1024px ){
+    header{
+        background: url('../../../public/bg-cafe-sm.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
